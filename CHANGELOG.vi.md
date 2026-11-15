@@ -19,6 +19,7 @@ và dự án tuân theo [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Sửa
 - Ghim `maven-resources-plugin` phiên bản `3.3.1` trong `sdk/java/pom.xml` (phiên bản mặc định `3.5.0` không tồn tại trên Maven Central) — khôi phục job CI Java
 - Sửa đường dẫn phát triển trong README (`cd sdk/python`, `cd sdk/nodejs`)
+- Sửa lề block-scalar YAML trong `.gitlab-ci.yml` khiến pipeline GitLab không tạo được job
 
 ## [1.2.0] - 2026-11-15
 

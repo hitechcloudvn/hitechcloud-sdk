@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Pinned `maven-resources-plugin` to `3.3.1` in `sdk/java/pom.xml` (the default lifecycle version `3.5.0` is not published on Maven Central) — unblocks the Java CI job
 - Corrected development paths in README (`cd sdk/python`, `cd sdk/nodejs`)
+- Fixed YAML block-scalar indentation in `.gitlab-ci.yml` that prevented GitLab pipelines from creating jobs
 
 ## [1.2.0] - 2026-11-15
 

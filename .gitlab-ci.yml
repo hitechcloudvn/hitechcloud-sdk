@@ -112,4 +112,4 @@ release:
         --name "HiTechCloud UserAPI SDK $CI_COMMIT_TAG" \
         --description "**English** — Official multi-language SDK for the HiTechCloud User API (348 endpoints, 38 groups). See CHANGELOG.md for details.
 
-**Tiếng Việt** — SDK đa ngôn ngữ chính thức cho HiTechCloud User API (348 endpoint, 38 nhóm). Xem CHANGELOG.md để biết chi tiết."
+        **Tiếng Việt** — SDK đa ngôn ngữ chính thức cho HiTechCloud User API (348 endpoint, 38 nhóm). Xem CHANGELOG.md để biết chi tiết."
