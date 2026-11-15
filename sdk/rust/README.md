@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](README.vi.md)
+
 # HiTechCloud hitechcloud-sdk — Rust SDK
 
 > **Status:** Planned — contributions welcome!
