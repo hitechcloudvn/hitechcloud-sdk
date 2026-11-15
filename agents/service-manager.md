@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](service-manager.vi.md)
+
 # Service Manager Agent
 
 An AI agent for managing HiTechCloud services.

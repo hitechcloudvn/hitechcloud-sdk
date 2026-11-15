@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](README.vi.md)
+
 # HiTechCloud Node.js SDK
 
 [![npm version](https://img.shields.io/npm/v/hitechcloud-sdk)](https://www.npmjs.com/package/hitechcloud-sdk)

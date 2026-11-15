@@ -1,8 +1,8 @@
 #!/usr/bin/env go
 /**
- * Basic usage example for HiTechCloud Go SDK
+ * Ví dụ sử dụng cơ bản cho HiTechCloud Go SDK / Basic usage example for HiTechCloud Go SDK
  * 
- * Set your API key:
+ * Đặt API key của bạn: / Set your API key:
  *   export HITECHCLOUD_API_KEY=your-api-key
  */
 package main
@@ -15,21 +15,21 @@ func main() {
     client := hitechcloud.NewClient("your-api-key")
 }
 
-// List all services
+// Liệt kê tất cả dịch vụ / List all services
 services, err := client.Services.ListServices(nil)
 if err != nil {
     log.Fatal(err)
 }
 fmt.Println(services)
 
-// Get a specific service
+// Lấy một dịch vụ cụ thể / Get a specific service
 service, err := client.Services.GetService(123)
 if err != nil {
     log.Fatal(err)
 }
 fmt.Println(service)
 
-// Power operations
+// Các thao tác nguồn / Power operations
 client.Services.StartService(123)
 client.Services.StopService(123)
 client.Services.RebootService(123)

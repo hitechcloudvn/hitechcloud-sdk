@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](deploy-service.vi.md)
+
 ---
 name: deploy-hitechcloud-service
 description: Deploy and manage HiTechCloud services (VPS, hosting, GPU)

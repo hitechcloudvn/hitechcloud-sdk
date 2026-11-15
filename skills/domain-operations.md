@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](domain-operations.vi.md)
+
 ---
 name: manage-hitechcloud-domains
 description: Register, transfer, and manage domains on HiTechCloud

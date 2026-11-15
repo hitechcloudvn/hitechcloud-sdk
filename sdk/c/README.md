@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](README.vi.md)
+
 # HiTechCloud hitechcloud-sdk — C SDK
 
 > **Status:** Planned — contributions welcome!

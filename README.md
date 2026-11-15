@@ -1,4 +1,10 @@
+> **English** | [Tiếng Việt](README.vi.md)
+
 # HiTechCloud UserAPI SDK
+
+[![CI](https://github.com/hitechcloudvn/hitechcloud-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/hitechcloudvn/hitechcloud-sdk/actions/workflows/ci.yml)
+[![GitLab Pipeline](https://gitlab.com/hitechcloudvn/hitechcloud-sdk/badges/main/pipeline.svg)](https://gitlab.com/hitechcloudvn/hitechcloud-sdk/-/pipelines)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Official multi-language SDK for the [HiTechCloud User API](https://docs.hitechcloud.vn) — 348 endpoints across 38 groups.
 
@@ -55,13 +61,13 @@ This repository contains official SDK implementations for the HiTechCloud User A
 ### Authentication
 
 ```bash
-# Get token
+# Get token / Lấy token
 TOKEN=$(curl -s -X POST "https://ote.hitechcloud.vn/login" \
   -H "Content-Type: application/json" \
   -d '{"username":"demo@ote.hitechcloud.vn","password":"W9vTyPuJLyTVHAJ3Fe3Coi2h"}' \
   | grep -o '"token":"[^"]*"' | cut -d'"' -f4)
 
-# Use token
+# Use token / Dùng token
 curl -s "https://ote.hitechcloud.vn/service" \
   -H "Authorization: Bearer $TOKEN"
 ```
@@ -77,13 +83,13 @@ client = HiTechCloud(
     password="W9vTyPuJLyTVHAJ3Fe3Coi2h"
 )
 
-# List services
+# List services / Danh sách dịch vụ
 services = client.services.list()
 
-# Get domain details
+# Get domain details / Xem chi tiết miền
 domain = client.domains.get(123)
 
-# Create support ticket
+# Create support ticket / Tạo phiếu hỗ trợ
 ticket = client.support.create_ticket(
     subject="Need help",
     message="Having an issue with my service",
@@ -102,10 +108,10 @@ const client = new HiTechCloud({
     password: 'W9vTyPuJLyTVHAJ3Fe3Coi2h'
 });
 
-// List services
+// List services / Danh sách dịch vụ
 const services = await client.services.list();
 
-// Get domain details
+// Get domain details / Xem chi tiết miền
 const domain = await client.domains.get(123);
 ```
 
@@ -120,10 +126,10 @@ $client = new Client([
     'password' => 'W9vTyPuJLyTVHAJ3Fe3Coi2h',
 ]);
 
-// List services
+// List services / Danh sách dịch vụ
 $services = client->services()->list();
 
-// Get domain details
+// Get domain details / Xem chi tiết miền
 $domain = client->domains()->get(123);
 ```
 
@@ -154,24 +160,27 @@ $domain = client->domains()->get(123);
 ## Development
 
 ```bash
-# Clone repository
+# Clone repository / Clone kho lưu trữ
 git clone https://github.com/hitechcloudvn/hitechcloud-sdk.git
 cd hitechcloud-sdk
 
-# Run tests (Python example)
-cd python && pip install -e ".[dev]" && pytest
+# Run tests (Python example) / Chạy kiểm thử (ví dụ Python)
+cd sdk/python && pip install -e ".[dev]" && pytest
 
-# Run tests (Node.js example)
-cd node && npm install && npm test
+# Run tests (Node.js example) / Chạy kiểm thử (ví dụ Node.js)
+cd sdk/nodejs && npm install && npm test
 ```
+
+CI/CD runs automatically on GitHub Actions and GitLab CI when you push — do not build release artifacts locally.
+CI/CD chạy tự động trên GitHub Actions và GitLab CI khi bạn đẩy code — không build artifact phát hành ở máy cục bộ.
 
 ## Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
+See [CONTRIBUTING.md](CONTRIBUTING.md) / Xem [CONTRIBUTING.md](CONTRIBUTING.vi.md).
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) / Xem [CHANGELOG.md](CHANGELOG.vi.md).
 
 ## License
 

@@ -1,9 +1,20 @@
 name: Release
 
+# Publishes a GitHub Release when a version tag is pushed.
+# Also supports manual dispatch to backfill releases for existing tags.
+# Phát hành GitHub Release khi đẩy tag phiên bản.
+# Hỗ trợ chạy thủ công để tạo lại release cho các tag đã có.
+
 on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing tag to release (e.g. v1.0.0). Leave empty to release the current ref. / Tag đã có để phát hành (vd: v1.0.0). Để trống nếu phát hành ref hiện tại.'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -14,8 +25,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.tag || github.ref }}
 
-      - name: Create Release
+      - name: Resolve tag name / Xác định tên tag
+        id: tag
+        shell: bash
+        run: |
+          TAG="${{ inputs.tag || github.ref_name }}"
+          echo "name=$TAG" >> "$GITHUB_OUTPUT"
+          echo "Releasing tag: $TAG"
+
+      - name: Create Release / Tạo Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.tag.outputs.name }}
           generate_release_notes: true
+          body: |
+            ## HiTechCloud UserAPI SDK ${{ steps.tag.outputs.name }}
+
+            **English** — Official multi-language SDK for the HiTechCloud User API (348 endpoints, 38 groups). See [CHANGELOG.md](https://github.com/hitechcloudvn/hitechcloud-sdk/blob/main/CHANGELOG.md) for details.
+
+            **Tiếng Việt** — SDK đa ngôn ngữ chính thức cho HiTechCloud User API (348 endpoint, 38 nhóm). Xem [CHANGELOG.md](https://github.com/hitechcloudvn/hitechcloud-sdk/blob/main/CHANGELOG.md) để biết chi tiết.

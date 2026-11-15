@@ -47,6 +47,15 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <!-- Pinned explicitly: the version from the Maven default lifecycle
+                     (3.5.0) is not published on Maven Central and breaks CI resolution.
+                     / Ghim phiên bản tường minh: phiên bản mặc định (3.5.0) không tồn
+                     tại trên Maven Central nên CI không phân giải được. -->
+                <version>3.3.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.3</version>
             </plugin>

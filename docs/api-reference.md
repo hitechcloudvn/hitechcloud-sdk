@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](api-reference.vi.md)
+
 # API Reference
 
 Base URL: `https://docs.hitechcloud.vn`

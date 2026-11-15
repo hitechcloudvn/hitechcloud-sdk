@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](README.vi.md)
+
 # HiTechCloud SDK Skills
 
 Skills for AI coding assistants (GitHub Copilot, Claude, etc.).
