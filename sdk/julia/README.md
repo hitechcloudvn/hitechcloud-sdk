@@ -6,7 +6,7 @@
 
 ```julia
 using Pkg
-Pkg.add(url = "https://github.com/hitechcloud/hitechcloud-sdk-julia")
+Pkg.add(url = "https://github.com/hitechcloudvn/hitechcloud-sdk", subdir = "sdk/julia")
 ```
 
 ## Quick Start

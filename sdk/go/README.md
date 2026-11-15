@@ -5,7 +5,7 @@ Go SDK for HiTechCloud UserAPI - Manage hosting, domains, DNS, SSL, billing, and
 ## Installation
 
 ```bash
-go get github.com/hitechcloud-vietnam/hitechcloud-sdk/go
+go get github.com/hitechcloudvn/hitechcloud-sdk/sdk/go
 ```
 
 ## Quick Start
@@ -17,7 +17,7 @@ import (
     "fmt"
     "log"
 
-    hitechcloud "github.com/hitechcloud-vietnam/hitechcloud-sdk/go"
+    hitechcloud "github.com/hitechcloudvn/hitechcloud-sdk/sdk/go"
 )
 
 func main() {
@@ -238,7 +238,7 @@ client.Virtualizor.Stop(vpsID)
 ## Error Handling
 
 ```go
-import hitechcloud "github.com/hitechcloud-vietnam/hitechcloud-sdk/go"
+import hitechcloud "github.com/hitechcloudvn/hitechcloud-sdk/sdk/go"
 
 result, err := client.Services.List(nil)
 if err != nil {

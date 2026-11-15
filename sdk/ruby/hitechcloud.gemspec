@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'Ruby SDK for HiTechCloud UserAPI'
   spec.description = 'Official Ruby SDK for HiTechCloud hosting platform API. Manage domains, services, DNS, SSL, billing, and more.'
-  spec.homepage = 'https://github.com/hitechcloud-vietnam/hitechcloud-sdk'
+  spec.homepage = 'https://github.com/hitechcloudvn/hitechcloud-sdk'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.7.0'
 

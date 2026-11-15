@@ -13,7 +13,7 @@ This repository contains official SDK implementations for the HiTechCloud User A
 | Python | `hitechcloud-sdk` (PyPI) | ✅ |
 | Node.js | `hitechcloud-sdk` (npm) | ✅ |
 | PHP | `hitechcloud/sdk` (Composer) | ✅ |
-| Go | `github.com/hitechcloud-vietnam/hitechcloud-sdk/go` | ✅ |
+| Go | `github.com/hitechcloudvn/hitechcloud-sdk/sdk/go` | ✅ |
 | Ruby | `hitechcloud_sdk` (RubyGems) | ✅ |
 | Java | `vn.hitechcloud:sdk` (Maven) | ✅ |
 | C# | `HiTechCloud.SDK` (NuGet) | ✅ |
@@ -155,7 +155,7 @@ $domain = client->domains()->get(123);
 
 ```bash
 # Clone repository
-git clone https://github.com/hitechcloud-vietnam/hitechcloud-sdk.git
+git clone https://github.com/hitechcloudvn/hitechcloud-sdk.git
 cd hitechcloud-sdk
 
 # Run tests (Python example)
@@ -181,4 +181,5 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 - 📧 Email: support@hitechcloud.vn
 - 📖 Documentation: https://docs.hitechcloud.vn
-- 🐛 Issues: https://github.com/hitechcloud-vietnam/hitechcloud-sdk/issues
+- 🐛 Issues: https://github.com/hitechcloudvn/hitechcloud-sdk/issues
+- 🦊 GitLab Mirror: https://gitlab.com/hitechcloudvn/hitechcloud-sdk

@@ -34,10 +34,10 @@ async = ["aiohttp>=3.8.0"]
 dev = ["pytest>=7.0", "pytest-asyncio>=0.21", "responses>=0.23"]
 
 [project.urls]
-Homepage = "https://github.com/hitechcloud-vietnam/hitechcloud-sdk"
+Homepage = "https://github.com/hitechcloudvn/hitechcloud-sdk"
 Documentation = "https://docs.hitechcloud.vn"
-Repository = "https://github.com/hitechcloud-vietnam/hitechcloud-sdk"
-Issues = "https://github.com/hitechcloud-vietnam/hitechcloud-sdk/issues"
+Repository = "https://github.com/hitechcloudvn/hitechcloud-sdk"
+Issues = "https://github.com/hitechcloudvn/hitechcloud-sdk/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

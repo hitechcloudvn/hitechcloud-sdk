@@ -20,5 +20,6 @@ Welcome to the HiTechCloud SDK documentation.
 ## Quick Links
 
 - [OpenAPI Specification](../openapi.json)
-- [GitHub Repository](https://github.com/hitechcloud-vietnam/hitechcloud-sdk)
+- [GitHub Repository](https://github.com/hitechcloudvn/hitechcloud-sdk)
+- [GitLab Mirror](https://gitlab.com/hitechcloudvn/hitechcloud-sdk)
 - [API Documentation](https://docs.hitechcloud.vn)

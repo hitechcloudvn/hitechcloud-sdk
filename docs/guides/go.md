@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-go get github.com/hitechcloud-vietnam/hitechcloud-sdk/sdk/go
+go get github.com/hitechcloudvn/hitechcloud-sdk/sdk/go
 ```
 
 ## Initialization
@@ -12,7 +12,7 @@ go get github.com/hitechcloud-vietnam/hitechcloud-sdk/sdk/go
 package main
 
 import (
-    "github.com/hitechcloud-vietnam/hitechcloud-sdk/sdk/go"
+    "github.com/hitechcloudvn/hitechcloud-sdk/sdk/go"
 )
 
 func main() {

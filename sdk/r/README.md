@@ -5,7 +5,7 @@
 ## Installation
 
 ```r
-devtools::install_github("hitechcloud/hitechcloud-sdk-r")
+devtools::install_github("hitechcloudvn/hitechcloud-sdk", subdir = "sdk/r")
 ```
 
 ## Quick Start

@@ -8,7 +8,7 @@
 package main
 
 import (
-    "github.com/hitechcloud-vietnam/hitechcloud-sdk/sdk/go"
+    "github.com/hitechcloudvn/hitechcloud-sdk/sdk/go"
 )
 
 func main() {

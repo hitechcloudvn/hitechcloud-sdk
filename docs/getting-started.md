@@ -21,7 +21,7 @@ composer require hitechcloud/sdk
 
 ### Go
 ```bash
-go get github.com/hitechcloud-vietnam/hitechcloud-sdk/sdk/go
+go get github.com/hitechcloudvn/hitechcloud-sdk/sdk/go
 ```
 
 ### Ruby
