@@ -1,0 +1,115 @@
+# GitLab CI/CD for HiTechCloud UserAPI SDK
+# CI/CD GitLab cho HiTechCloud UserAPI SDK
+#
+# Runs tests on every push/branch and publishes a GitLab Release when a
+# version tag is pushed. Mirrors .github/workflows/ci.yml + release.yml.
+# Chạy kiểm thử trên mọi push/nhánh và phát hành GitLab Release khi đẩy
+# tag phiên bản. Phản chiếu .github/workflows/ci.yml + release.yml.
+
+stages:
+  - test
+  - release
+
+default:
+  interruptible: true
+
+# ---------- Tests / Kiểm thử ----------
+
+python:
+  stage: test
+  image: python:3.12
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - cd sdk/python
+    - pip install -e ".[dev]"
+    - python -m pytest tests/ -v
+
+nodejs:
+  stage: test
+  image: node:20
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - cd sdk/nodejs
+    - npm install
+    - npm test
+
+php:
+  stage: test
+  image: php:8.3-cli
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  before_script:
+    - apt-get update && apt-get install -y git unzip
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+  script:
+    - cd sdk/php
+    - composer install
+    - php -l src/
+    - vendor/bin/phpunit
+
+go:
+  stage: test
+  image: golang:1.22
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - cd sdk/go
+    - go vet ./...
+    - go test ./...
+
+ruby:
+  stage: test
+  image: ruby:3.3
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - cd sdk/ruby
+    - bundle install
+    - bundle exec rake test
+
+java:
+  stage: test
+  image: maven:3.9-eclipse-temurin-17
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - cd sdk/java
+    - mvn test
+
+csharp:
+  stage: test
+  image: mcr.microsoft.com/dotnet/sdk:8.0
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - cd sdk/csharp
+    - dotnet test Tests/Tests.csproj
+
+validate-spec:
+  stage: test
+  image: python:3.12
+  rules:
+    - if: $CI_COMMIT_TAG == null
+  script:
+    - pip install openapi-spec-validator
+    - python tools/validate_spec.py
+
+# ---------- Release / Phát hành ----------
+# Publishes a GitLab Release for version tags (v*).
+# Phát hành GitLab Release cho các tag phiên bản (v*).
+
+release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v/
+  script:
+    - |
+      release-cli create \
+        --tag-name "$CI_COMMIT_TAG" \
+        --name "HiTechCloud UserAPI SDK $CI_COMMIT_TAG" \
+        --description "**English** — Official multi-language SDK for the HiTechCloud User API (348 endpoints, 38 groups). See CHANGELOG.md for details.
+
+**Tiếng Việt** — SDK đa ngôn ngữ chính thức cho HiTechCloud User API (348 endpoint, 38 nhóm). Xem CHANGELOG.md để biết chi tiết."
