@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](authentication.vi.md)
+
 # Authentication
 
 The HiTechCloud User API supports two authentication methods:

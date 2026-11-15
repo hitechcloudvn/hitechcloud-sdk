@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](rate-limiting.vi.md)
+
 # Rate Limiting
 
 ## Limits

@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](csharp.vi.md)
+
 # Csharp SDK Guide
 
 ## Installation
