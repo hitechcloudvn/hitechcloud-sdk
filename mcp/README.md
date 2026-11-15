@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](README.vi.md)
+
 # HiTechCloud MCP Server
 
 Model Context Protocol (MCP) server for the HiTechCloud User API.

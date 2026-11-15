@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](dns-agent.vi.md)
+
 # DNS Agent
 
 An AI agent for managing DNS zones and records.

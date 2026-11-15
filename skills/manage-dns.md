@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](manage-dns.vi.md)
+
 ---
 name: manage-hitechcloud-dns
 description: Manage DNS zones and records on HiTechCloud

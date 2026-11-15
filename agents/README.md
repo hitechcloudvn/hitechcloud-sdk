@@ -1,3 +1,5 @@
+> **English** | [Tiếng Việt](README.vi.md)
+
 # HiTechCloud SDK Agents
 
 AI agent configurations for using the HiTechCloud SDK.
